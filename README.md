@@ -101,7 +101,69 @@ pip3 install -r requirements.txt
 
 ---
 
-## Passion & Business Impact
+## Business Impact
 
 As a passionate risk analytics practitioner, I find this project immensely rewarding as it blends statistical rigor with machine learning to solve real-world financial challenges. By delivering scalable, interpretable credit risk models aligned with regulatory frameworks, this work empowers banks to make data-driven lending decisions that optimize profitability while managing risk effectively. The project’s comprehensive pipeline supports dynamic model monitoring, ensuring sustained model performance and regulatory compliance — critical in today’s evolving financial landscape.
 
+
+
+## 📊 Results Summary
+
+This project implements an end-to-end credit risk modeling pipeline using Lending Club loan data. The solution includes:
+
+* **Probability of Default (PD)**
+* **Loss Given Default (LGD)**
+* **Exposure at Default (EAD)**
+* **Expected Loss (EL)**
+* **Model Monitoring (Population Stability Index, PSI)**
+
+### Key Findings
+
+* **Dataset:**
+
+  > Over 800,000 loans from 2007–2014 (training), validated on 2015 data.
+
+* **Probability of Default (PD):**
+
+  > PD model based on logistic regression provided strong separation between good and bad loans.
+
+* **Loss Given Default (LGD):**
+
+  * **Average Recovery Rate:** \~6%
+  * **Mean LGD:** 94%
+  * *Most defaults resulted in near-total loss after recoveries.*
+  * **Top predictors:** Loan grade and verification status.
+
+* **Exposure at Default (EAD):**
+
+  * **Mean EAD:** \$10,799
+  * *Most defaults occurred before major principal repayment.*
+
+* **Expected Loss (EL):**
+
+  * **Mean EL per loan:** \$1,090
+  * **Portfolio EL rate:** 7.6% (expected loss per \$1 lent)
+  * **Total expected loss:** \$508 million (vs. \$6.66 billion funded)
+
+* **Model Monitoring (PSI):**
+
+  * **Overall PSI:** 0.85 (*significant drift*)
+  * **Features with notable change:**
+
+    * `initial_list_status` (PSI = 0.33) — Significant shift
+    * `Score` (PSI = 0.14) — Moderate shift
+  * **Action:** Model retraining/recalibration is recommended for continued accuracy.
+
+---
+
+### 📌 Business Implications
+
+* **High loss severity and exposure at default** require careful risk pricing and capital allocation.
+* **Borrower profiles have changed over time**—regular monitoring and model updates are essential.
+* **Expected loss rate (7.6%)** provides a data-driven basis for credit policy and capital planning.
+
+---
+
+**For best results, retrain and monitor the models regularly as new data becomes available.**
+
+---
