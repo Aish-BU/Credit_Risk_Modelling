@@ -2,7 +2,7 @@
 
 ---
 
-## Background
+## 📚 Background
 
 Credit risk modeling is a critical function for financial institutions, representing the risk that borrowers may fail to repay loans, credit cards, or other credit facilities. In many cases, borrowers may only partially repay the principal and interest amounts, increasing the lender’s exposure to loss. Both traditional statistical methods and modern machine learning techniques play a vital role in managing large datasets and developing accurate predictive models.
 
@@ -10,7 +10,7 @@ This project harnesses advanced data science and machine learning to build compr
 
 ---
 
-## Project Overview
+## 🚀 Project Overview
 
 The objective of this project is to develop an end-to-end AI-powered credit risk modeling pipeline using Lending Club loan data. The goal is twofold: (1) to generate a practical scorecard for loan approval and risk-based pricing, and (2) to establish a pipeline for calculating exposure loss through integrated risk components.
 
@@ -28,7 +28,7 @@ This notebook series includes revisions and additions from the credit risk cours
 
 ---
 
-## Key Documents (Notebooks)
+## 🗂️ Key Notebooks
 
 * **L01:** Data preprocessing and feature engineering — transforming raw data into model-ready input.
 * **L02:** Probability of Default modeling — logistic regression, scorecard creation, and cutoff determination.
@@ -37,13 +37,13 @@ This notebook series includes revisions and additions from the credit risk cours
 
 ---
 
-## Dataset
+## 📊 Dataset
 
 The dataset, sourced from Lending Club and available on Kaggle, contains over 800,000 consumer loans issued in the US between 2007 and 2015. For modeling, data is split into two periods: 2007-2014 for model training and 2015 for validation and monitoring. This approach simulates real-world deployment and regulatory compliance checks.
 
 ---
 
-## Model Performances
+## ⚙️ Model Performances
 
 | Model                       | Technique           | Key Metrics                 |
 | --------------------------- | ------------------- | --------------------------- |
@@ -52,107 +52,110 @@ The dataset, sourced from Lending Club and available on Kaggle, contains over 80
 | LGD Stage 2                 | Linear Regression   | Accuracy: 0.777             |
 | Exposure at Default (EAD)   | Linear Regression   | Accuracy: 0.658             |
 
-Further improvements and enhancements are possible through feature engineering, ensemble modeling, and hyperparameter tuning.
+Further improvements are possible via feature engineering, ensemble modeling, and hyperparameter tuning.
 
 ---
 
-## Deliverables
+## 📦 Project Directory Layout
 
-* An interpretable scorecard compliant with regulatory standards.
-* A dataframe to analyze cutoff impacts on borrower acceptance rates.
-* Robust LGD, EAD, and EL models.
-* A pipeline to monitor model stability through population stability index metrics.
-
----
-
-## Technologies
-
-* Python 3.8
-* Jupyter Notebook 6.4.12
-* Key Python libraries (detailed in `requirements.txt`)
-* VSCode 1.71.2
-* Google Colab-ready for easy cloud execution without local setup.
-
----
-
-## Getting Started
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/Aish-BU/Credit_Risk_Modelling.git
-cd Credit_Risk_Modelling
-pip3 install -r requirements.txt
+```
+Aish-BU/
+│
+├── L01_LoanData_CreditRisk_Preprocessing_PD.html           # Data preprocessing & feature engineering
+├── L02_LoanData_CreditRisk_PD_Scorecard_Cutoffs.html       # PD modeling, scorecard, cutoffs
+├── L03_LoanData_CreditRisk_LGD,_EAD_and_Expected_Loss.html # LGD, EAD, Expected Loss modeling
+├── L04_LoanData_CreditRisk_PSI_check.html                  # Model stability (PSI) check
+│
+├── functions.py       # Custom Python functions
+├── requirements.txt   # Python dependencies
+├── README.md          # Project overview and instructions
+└── (Add datasets/outputs as needed)
 ```
 
 ---
 
-## Project Directory Layout
+## 🚦 How to Use This Project
 
-```
-.
-├── Notebooks               # Jupyter notebooks for each project phase  
-├── src                     # Scripts containing reusable functions
-├── data                    # Datasets (some stored on Google Drive)    
-├── LICENSE
-├── README.md 
-└── requirements.txt
-```
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/Aish-BU.git
+   cd Aish-BU
+   ```
+
+2. **Install Dependencies**
+
+   * Recommended: use a virtual environment.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Notebooks**
+
+   * Open the `.html` notebooks in your browser for a read-only view, **or**
+   * Run `.ipynb` notebooks (if available) in Jupyter Notebook or Google Colab.
+
+4. **Custom Functions**
+
+   * Import and use `functions.py` for data preprocessing/model utilities.
+
+5. **Explore Each Notebook**
+
+   * **L01:** Data cleaning & feature engineering
+   * **L02:** PD modeling and scorecard
+   * **L03:** LGD, EAD, EL calculations
+   * **L04:** Model monitoring (PSI)
 
 ---
 
-## Business Impact
+## 🏦 Business Impact
 
-As a passionate risk analytics practitioner, I find this project immensely rewarding as it blends statistical rigor with machine learning to solve real-world financial challenges. By delivering scalable, interpretable credit risk models aligned with regulatory frameworks, this work empowers banks to make data-driven lending decisions that optimize profitability while managing risk effectively. The project’s comprehensive pipeline supports dynamic model monitoring, ensuring sustained model performance and regulatory compliance — critical in today’s evolving financial landscape.
+By combining statistical rigor with machine learning, this project delivers scalable and interpretable credit risk models aligned with regulatory frameworks. Banks and lenders can leverage these models to:
 
+* **Make data-driven lending decisions**
+* **Optimize profitability**
+* **Manage and monitor risk exposure**
+* **Stay compliant with Basel II and regulatory requirements**
 
+The pipeline supports dynamic model monitoring, ensuring sustained model performance and regulatory compliance in today’s evolving financial landscape.
+
+---
 
 ## 📊 Results Summary
 
-This project implements an end-to-end credit risk modeling pipeline using Lending Club loan data. The solution includes:
-
-* **Probability of Default (PD)**
-* **Loss Given Default (LGD)**
-* **Exposure at Default (EAD)**
-* **Expected Loss (EL)**
-* **Model Monitoring (Population Stability Index, PSI)**
+**End-to-end credit risk modeling using Lending Club loan data:**
+Includes PD, LGD, EAD, EL, and model monitoring (PSI).
 
 ### Key Findings
 
 * **Dataset:**
+  Over 800,000 loans from 2007–2014 (training), validated on 2015 data.
+* **PD Model:**
+  Logistic regression provided strong separation between good and bad loans.
+* **LGD:**
 
-  > Over 800,000 loans from 2007–2014 (training), validated on 2015 data.
-
-* **Probability of Default (PD):**
-
-  > PD model based on logistic regression provided strong separation between good and bad loans.
-
-* **Loss Given Default (LGD):**
-
-  * **Average Recovery Rate:** \~6%
+  * **Avg. Recovery Rate:** \~6%
   * **Mean LGD:** 94%
   * *Most defaults resulted in near-total loss after recoveries.*
-  * **Top predictors:** Loan grade and verification status.
-
-* **Exposure at Default (EAD):**
+  * **Top predictors:** Loan grade, verification status
+* **EAD:**
 
   * **Mean EAD:** \$10,799
   * *Most defaults occurred before major principal repayment.*
-
-* **Expected Loss (EL):**
+* **EL:**
 
   * **Mean EL per loan:** \$1,090
   * **Portfolio EL rate:** 7.6% (expected loss per \$1 lent)
   * **Total expected loss:** \$508 million (vs. \$6.66 billion funded)
-
 * **Model Monitoring (PSI):**
 
   * **Overall PSI:** 0.85 (*significant drift*)
-  * **Features with notable change:**
+  * **Notable feature changes:**
 
     * `initial_list_status` (PSI = 0.33) — Significant shift
     * `Score` (PSI = 0.14) — Moderate shift
-  * **Action:** Model retraining/recalibration is recommended for continued accuracy.
+  * **Action:** Retrain/recalibrate models for continued accuracy
 
 ---
 
@@ -160,10 +163,9 @@ This project implements an end-to-end credit risk modeling pipeline using Lendin
 
 * **High loss severity and exposure at default** require careful risk pricing and capital allocation.
 * **Borrower profiles have changed over time**—regular monitoring and model updates are essential.
-* **Expected loss rate (7.6%)** provides a data-driven basis for credit policy and capital planning.
+* **Expected loss rate (7.6%)** provides a robust, data-driven foundation for credit policy and capital planning.
 
 ---
 
 **For best results, retrain and monitor the models regularly as new data becomes available.**
 
----
