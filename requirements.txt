@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+seaborn
+gdown
+scikit-learn == 1.0.2
+pickle
+scipy
+cpi == 1.0.5 #will need it
